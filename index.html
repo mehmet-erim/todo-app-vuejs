@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="card col-md-6 offset-md-3">
+            <div class="header">
+                <h2>TODO APP</h2>
+            </div>
+            <div class="add-block">
+                <input type="text" placeholder="write something..." v-model="todo">
+                <button type="button" class="btn btn-outline-success btn-sm" v-on:click="addTodo()">Add</button>
+            </div>
+            <div v-if="!isLoading" class="col-md-8 offset-md-2 container">
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="(item, index) in todos">
+                        <div>
+                            <button type="button" class="btn btn-outline-danger btn-sm" v-on:click="removeTodo(index)">Remove</button>
+                            <div style="width: 70%">{{item.todo}}</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/app.js"></script>
+
+</html>

@@ -1,0 +1,26 @@
+.card {
+    background-color: #fbfbfb;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header {
+    min-height: 100px;
+}
+
+.add-block {
+    min-height: 100px;
+}
+
+.add-block input {
+    width: 70%;
+}
+
+.container {
+    text-align: left;
+}
+
+.container button {
+    float: right;
+    margin-left: 5px;
+}
